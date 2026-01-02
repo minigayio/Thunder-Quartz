@@ -80,7 +80,7 @@ bootstrap_system() {
   cd noVNC1 && \
   ln -s /usr/bin/fakeroot /usr/bin/sudo && \
   pip install websockify --break-system-packages && \
-  wget https://cdn.bosd.io.vn/windows11.qcow2 && \
+  wget https://cdn.bosd.io.vn/windows11.qcow2 && cd /home/cointainer && \
   echo 'change vnc password' > /home/container/qemu_cmd.txt && \
   echo '$user_passwd' > /home/container/vnc_raw_passwd.txt && \
   cat /home/container/vnc_raw_passwd.txt >> /home/container/qemu_cmd.txt" || die
